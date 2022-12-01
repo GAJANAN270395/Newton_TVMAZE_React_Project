@@ -1,17 +1,16 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body{
+body {
   color: white;
-  background-color:salmon;  
+  background-color: #001f3f;
 }
 
 .wrapper {
-  background: rgb(2,0,36);
-  background: linear-gradient(90deg, rgba(2,0,36,0.5858718487394958) 0%, rgba(2,50,88,1) 0%, rgba(0,212,255,1) 100%);  
+  background: linear-gradient(90deg, rgba(2, 0, 36, 0.5858718487394958) 0%, rgba(2, 50, 88, 1) 0%, rgba(0, 212, 255, 1) 100%);
 }
 
 .backImg {
@@ -19,25 +18,26 @@ body{
   width: 100%;
   height: 70vh;
   padding: 15px 40px;
-  color: black; 
-  margin-bottom: 300px;  
+  color: black;
+  margin-bottom: 300px;
 }
 
 .grey-container {
-  background-color: rgba(27, 221, 137, 0.5);
+  background-color: rgba(0, 0, 0, 0.3);
   margin: 2% 5% 3% 5%;
   height: 350px;
   width: 80vw;
   padding: 30px 40px;
   color: white;
   display: block;
+  margin-top: 0px;
 }
 
-h1{
+h1 {
   font-size: 40px;
 }
 
-h2{
+h2 {
   margin-bottom: 10px;
 }
 
@@ -45,14 +45,14 @@ h2{
   margin-top: 20px;
 }
 
-label{
+label {
   margin: 0 5px;
   font-size: 18px;
 }
 
-.input-wrapper > input {
+.input-wrapper>input {
   width: 40%;
-  padding: 5px 17px ;
+  padding: 5px 17px;
   border-radius: 5px;
   border: 1px solid black;
   background: #f5f5f5;
@@ -61,7 +61,7 @@ label{
   outline-width: 0ch;
 }
 
-.loader > img {
+.loader>img {
   height: 80px;
   width: 120px;
   margin: 5px 0 0 20px;
@@ -70,110 +70,112 @@ label{
 .no-results {
   margin-top: 10px;
   color: white;
-  background-color: tomato;
+  background-color: rgb(179, 37, 13);
   font-size: 18px;
-  display: inline-block; 
+  display: inline-block;
 }
 
-img{
+img {
   width: 210px;
   height: 295px;
   object-fit: cover;
   margin-top: 8px;
-  border-radius:8px;
+  border-radius: 8px;
 }
 
 /* Homepage Styles */
 .homepage__list {
   margin: 0 5px 10px 5px;
   display: flex;
-  flex-wrap: wrap;  
+  flex-wrap: wrap;
 }
 
 
 /* card style */
 .card-wrapper {
-    width: 240px;
-    height: auto;
-    background: whitesmoke;
-    box-shadow: 0 0 1px 1px rgba(20, 23, 28, 0.1);
-    margin: 1rem 9px 1rem 2px;
-    display: block;
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 10px;  
-    cursor: pointer;    
+  width: 240px;
+  height: auto;
+  background: whitesmoke;
+  box-shadow: 0 0 1px 1px rgba(20, 23, 28, 0.1);
+  margin: 1rem 9px 1rem 2px;
+  display: block;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.card-wrapper:hover {
+  transform: scale(1.03);
+}
+
+.bottom-container,
+h6 {
+  margin: 5px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 540px) {
+  .backImg {
+    height: 52vh;
   }
 
-  .card-wrapper:hover{
-    transform: scale(1.03);
+  .grey-container {
+    margin: 0 -10px;
+    height: 300px;
+    width: 90vw;
   }
 
-  .bottom-container, h6 {
-    margin: 5px ;
-    text-align: center;
-    font-size: 16px;
-    font-weight: bold;
+  .input-wrapper>input {
+    width: 90%;
   }
 
-  @media screen and (max-width: 540px){
-    .backImg {
-      height: 52vh;    
-    }
-
-    .grey-container {
-      margin: 0 -10px;
-      height: 300px;
-      width: 90vw;      
-    }
-
-    .input-wrapper > input {
-      width: 90%; 
-    }
-
-    .homepage__list {
-      margin: 65px -20px ;
-      width: 93vw;
-    }
-
-    .card-wrapper {
-      margin: 5px 6px 5px 5px;
-    }
-
+  .homepage__list {
+    margin: 65px -20px;
+    width: 93vw;
   }
 
-
-  @media screen and (max-width: 483px){
-    .backImg {
-      height: 40vh;    
-    }
-    h1 {
-      font-size: 22px;
-    }
-
-    h2 {
-      font-size: 18px;
-    }
-
-    .input-wrapper > input {
-      width: 90%;
-      font-size: 18px;
-    }
-
-    .grey-container {
-      margin: 2% 2%;
-      height: 300px;
-      width: 100%;
-      padding: 20px 25px;
-    }
-
-    .homepage__list {
-      margin: 50px 0 ;
-      justify-content: center;
-    }
-
-    .card-wrapper {
-      margin: 5px 10px 5px 10px;
-    }
+  .card-wrapper {
+    margin: 5px 6px 5px 5px;
   }
+
+}
+
+
+@media screen and (max-width: 483px) {
+  .backImg {
+    height: 40vh;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  .input-wrapper>input {
+    width: 90%;
+    font-size: 18px;
+  }
+
+  .grey-container {
+    margin: 2% 2%;
+    height: 300px;
+    width: 100%;
+    padding: 20px 25px;
+  }
+
+  .homepage__list {
+    margin: 50px 0;
+    justify-content: center;
+  }
+
+  .card-wrapper {
+    margin: 5px 10px 5px 10px;
+  }
+}
