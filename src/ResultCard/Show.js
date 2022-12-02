@@ -10,11 +10,11 @@ const Show = (props) => {
             <img className="card-image" src={imageUrl} alt="Card cover" />
             <div className="bottom-container">
                 <h6>{name}</h6>
-                <div
-                    dangerouslySetInnerHTML={{
-                        __html: description,
-                    }}
-                />
+//                 <div
+//                     dangerouslySetInnerHTML={{
+//                         __html: description,
+//                     }}
+//                 />
                 <div>{rating}</div>
             </div>
         </div>
