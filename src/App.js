@@ -3,6 +3,7 @@ import "./App.css";
 //import ResultCard from "./ResultCard/ResultCard";
 import Show from "./ResultCard/Show";
 import Actor from "./ResultCard/Actor";
+import spinner from './spinner.gif';
 
 function App() {
   const [type, setType] = useState("");
@@ -73,7 +74,10 @@ function App() {
             onChange={onSearchChange}
           />
         </div>
-        {isLoading && <div className="loader">Loading...</div>}
+       {isLoading && <div className="loader">
+          <img src={spinner} alt='Loding...' />
+        </div>}
+        
         {searchResults.length === 0 && (
           <div className="no-results">No results found</div>
         )}
