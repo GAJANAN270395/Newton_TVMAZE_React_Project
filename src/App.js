@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import "./App.css";
-//import ResultCard from "./ResultCard/ResultCard";
 import Show from "./ResultCard/Show";
 import Actor from "./ResultCard/Actor";
+import spinner from './spinner.gif';
 
 function App() {
   const [type, setType] = useState("");
@@ -37,6 +38,7 @@ function App() {
   const onShowsChange = () => {
     setType("shows");
   };
+  console.log("type", type);
 
   const onSearchChange = (event) => {
     setSearchString(event.target.value);
@@ -73,12 +75,15 @@ function App() {
             onChange={onSearchChange}
           />
         </div>
-        {isLoading && <div className="loader">Loading...</div>}
+        {isLoading && <div className="loader">
+          <img src={spinner} alt='Loding...' />
+        </div>}
+
         {searchResults.length === 0 && (
           <div className="no-results">No results found</div>
         )}
-
       </div>
+
       <div className="Homepage_list">
         {
           (type === 'people')
@@ -88,8 +93,7 @@ function App() {
                   key={index}
                   imageUrl={result?.person?.image?.medium || notfound}
                   name={result?.person?.name}
-                //description={result.show.summary}
-                //rating={result.show.rating.average}
+                  country={result?.person?.country?.name || "notfound"}
                 />
               ))
             )
@@ -109,6 +113,6 @@ function App() {
     </div>
   );
 }
-
 export default App;
+
 
